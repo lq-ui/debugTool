@@ -1,0 +1,38 @@
+/* pages/WiFiList.wxss */
+
+.wifi-body {
+  height: 100%;
+  width: 100%;
+}
+
+.scan-view {
+
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.devices_summary {
+  margin-top: 10rpx;
+  padding: 10px 5%;
+  font-size: 16px;
+}
+.wifi_list {
+
+  height: 65%;
+  margin: 50px 5%;
+  margin-top: 0;
+  border: 1px solid #EEE;
+  border-radius: 5px;
+  width: auto;
+}
+.wifi_item {
+  border-bottom: 1px solid #EEE;
+  padding: 10px;
+  color: #b1d85c;
+}
+.wifi_item_hover {
+  background-color: rgba(0, 0, 0, .1);
+}

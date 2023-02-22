@@ -1,0 +1,36 @@
+<!--pages/WiFiList.wxml-->
+<wxs module="utils">
+  module.exports.filters = function(value) {
+    return value.toFixed(2)//此处2为保留两位小数
+  }
+  module.exports.secure = function(value) {
+    if (value) {
+      return "安全";
+    }else {
+      return "有风险";
+    }
+  }
+</wxs>
+
+<view class='wifi-body'>
+
+  <view class='scan-view'>
+    <button type="primary" bindtap="startWifi">获取WiFi列表</button>
+  </view>
+
+  <view class="devices_summary">已发现Wi-Fi信息：</view>
+
+  <scroll-view class="wifi_list" scroll-y scroll-with-animation>
+    <view wx:for="{{showlist}}" wx:key="index" data-device-id="{{item.SSID}}" data-name="{{item.BSSID}}" bindtap="createBLEConnection" class="wifi_item" hover-class="wifi_item_hover">
+      <view style="font-size: 16px; color: #333;">wifi名字：{{item.SSID}}</view>
+      <view style="font-size: 16px; color: #333;">BSSID：{{item.BSSID}}</view>
+      <view style="font-size: 16px; color: #333;">信号强度: {{utils.filters(item.signalStrength * 100)}}%</view>
+      <view style="font-size: 16px; color: #333;">WiFi是否安全：{{utils.secure(item.secure)}}</view>
+    </view>
+  </scroll-view>
+
+  <view class='gzh-view'>
+    <official-account></official-account>
+  </view>
+
+</view>

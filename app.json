@@ -1,0 +1,19 @@
+{
+  "pages": [
+    
+    "pages/index/index",
+    "pages/debugBase/debugBase",
+    "pages/functionPage/functionPage",
+    "pages/WiFiList/WiFiList",
+    "pages/Qrcode/Qrcode",
+    "pages/fbyMap/fbyMap"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#179B16",
+    "navigationBarTitleText": "网罗开发调试工具",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#F8F8F8"
+  },
+  "sitemapLocation": "sitemap.json"
+}

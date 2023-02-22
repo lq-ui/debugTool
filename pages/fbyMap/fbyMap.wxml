@@ -1,0 +1,51 @@
+<!--pages/fbyMap/fbyMap.wxml-->
+<!-- <view class='view'>
+  
+</view> -->
+
+<map 
+  id="myMap" 
+  longitude="{{longitude}}" 
+  latitude="{{latitude}}" 
+  markers="{{markers}}" 
+  covers="{{covers}}" 
+  circles="{{circle}}"
+  show-location>
+  <cover-view class="cover-view">
+    <cover-view class="container">
+      <cover-view class="flex-wrp" style="flex-direction:row;">
+        <cover-view class="flex-item demo-text-1"></cover-view>
+        <cover-view class="flex-item demo-text-2"></cover-view>
+        <cover-view class="flex-item demo-text-3"></cover-view>
+      </cover-view>
+    </cover-view>
+  </cover-view>
+</map>
+<view class="fbyLog">
+  <scroll-view scroll-y="true" class="scrollLog" scroll-top="{{scrollTop}}" scroll-with-animation="true">
+    <cover-view>
+  经度：{{longitude}}
+  </cover-view>
+    <cover-view>
+  纬度：{{latitude}}
+  </cover-view>
+  <cover-view>
+  当前位置：{{locationInfo}}
+  </cover-view>
+  <cover-view>
+  速度：{{speed}}
+  </cover-view>
+  <cover-view>
+  精度：{{accuracy}}
+  </cover-view>
+  </scroll-view>
+
+  <!-- <view wx:if='{{showOrHidden}}'>
+    <button bindtap="openSetting" class="mybtn" type="primary">打开定位权限</button>
+  </view> -->
+  
+  <!-- <view>
+    <button bindtap="openSetting">打开定位权限</button>
+    <button bindtap="openLocation" class="mybtn" type="primary">周边地点</button>
+  </view> -->
+</view>

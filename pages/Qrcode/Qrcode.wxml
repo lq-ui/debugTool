@@ -1,0 +1,26 @@
+<!--pages/Qrcode/Qrcode.wxml-->
+<view class="container-box">
+    <view class="img-box">
+        <canvas bindtap="previewImg" hidden="{{canvasHidden}}" style="width: 686rpx;height: 686rpx;background:#f1f1f1;" canvas-id="mycanvas"/>
+    </view>
+    <form bindsubmit="formSubmit">
+    <view class="remind">输入生成二维码内容：</view>
+        <view class="input-row">
+            <input name='url' value='' type="text" maxlength="255" placeholder="{{placeholder}}"/>
+        </view>
+        <button formType="submit" class="mybtn" type="primary">生成二维码</button>
+    </form>
+    <form bindsubmit="scanFormSubmit">
+        <view class="remind">显示扫描二维码结果：</view>
+        <view class="text-row">
+            <!-- <input name='url' value='' type="text" maxlength="255" placeholder="{{scanContent}}"/> -->
+            <text class="textView">{{scanContent}}</text>
+        </view>
+        <button formType="submit" class="mybtn" type="primary">扫描二维码</button>
+    </form>
+</view>
+
+<view hidden="{{maskHidden}}" class="mask"></view>
+<view class="canvas-box">
+    
+</view>
